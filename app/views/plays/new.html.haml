@@ -1,0 +1,24 @@
+.row
+  .col-md-offset-2.col-md-8
+    %h1 New play
+
+    %h3 Rules:
+    %ul
+      %li Rock beats scissors
+      %li Scissors beats paper
+      %li Paper beats rock
+
+    %p
+    = form_tag("/throw", :method => "post") do
+      .field
+        = label_tag(:sign, "Rock")
+        = radio_button_tag(:sign, "Rock")
+        = label_tag(:sign, "Scissors")
+        = radio_button_tag(:sign, "Scissors")
+        = label_tag(:sign, "Paper")
+        = radio_button_tag(:sign, "Paper")
+
+      .actions
+        = submit_tag("Throw")
+
+

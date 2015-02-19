@@ -1,0 +1,9 @@
+.row
+  .col-md-offset-2.col-md-8
+    %h1 Throw results: #{@status}
+
+    %p User Threw: #{@user_throw}
+    %p Server Threw: #{@server_throw}
+
+    %br
+    =link_to 'Play again', root_path
